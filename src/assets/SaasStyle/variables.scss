@@ -1,0 +1,63 @@
+$white: #ffffff;
+$blueText: #cedaf5;
+$bgBlue: #1a4990;
+$darkBlueText: #7687ad;
+$MainbuttonBlueActive: #3c80ff;
+$MainbuttonHover: rgba(60, 128, 255, 0.1);
+$buttonDisabled: rgba(129, 129, 129, 0.1);
+$statusLive: rgba(82, 128, 228, 0.2);
+$statusFilled: rgba(89, 97, 249, 0.1);
+$statusUpcoming: rgba(227, 89, 249, 0.1);
+$purpleBorder: #d940ff;
+$borderDefalutGrey: rgba(255, 255, 255, 0.2);
+$borderHoverBlue: rgba(60, 128, 255, 1);
+
+// $color-primary: $green;
+
+/********fonts********/
+
+@font-face {
+	font-family: "HK Grotesk";
+	src: url("../../assets/Fonts/HKGrotesk-Bold.woff2") format("woff2"),
+		url("../../assets/Fonts/HKGrotesk-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "HK Grotesk";
+	src: url("../../assets/Fonts/HKGrotesk-Light.woff2") format("woff2"),
+		url("../../assets/Fonts/HKGrotesk-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "HK Grotesk";
+	src: url("../../assets/Fonts/HKGrotesk-Medium.woff2") format("woff2"),
+		url("../../assets/Fonts/HKGrotesk-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "HK Grotesk";
+	src: url("../../assets/Fonts/HKGrotesk-SemiBold.woff2") format("woff2"),
+		url("../../assets/Fonts/HKGrotesk-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "HK Grotesk";
+	src: url("../../assets/Fonts/HKGrotesk-Regular.woff2") format("woff2"),
+		url("../../assets/Fonts/HKGrotesk-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+$font-primary: "HK Grotesk", sans-serif;
