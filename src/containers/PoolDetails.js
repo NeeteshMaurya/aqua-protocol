@@ -129,7 +129,7 @@ const PoolDetails = () => {
 		<>
 			<Helmet>
 				<title>Pool Details</title>
-				<meta name="description" content="SolClout application" />
+				<meta name="description" content="Aqua Protocol application" />
 			</Helmet>
 			<>
 				{singlePoolsData.length > 0 &&

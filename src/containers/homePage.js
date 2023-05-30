@@ -37,8 +37,8 @@ const HomePage = () => {
 	return (
 		<>
 			<Helmet>
-				<title>SolClout</title>
-				<meta name="description" content="SolClout application" />
+				<title>AQUA PROTOCOL</title>
+				<meta name="description" content="Aqua Protocol application" />
 			</Helmet>
 
 			<Introduction />
