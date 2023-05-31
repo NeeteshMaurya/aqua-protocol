@@ -40,20 +40,20 @@ export function OnBoardingButton() {
 				}
 				setButtonText(CONNECT_TEXT);
 				setDisabled(false);
-				window.ethereum
-					.request({ method: "eth_requestAccounts" })
-					.then(handleNewAccounts)
-					.catch((err) =>
-						toast.error(err.message, {
-							position: "top-right",
-							autoClose: 5000,
-							hideProgressBar: false,
-							closeOnClick: true,
-							pauseOnHover: true,
-							draggable: false,
-							progress: undefined,
-						})
-					);
+				// window.ethereum                       this was causing automatic connection with metamask without clicking on button
+				// 	.request({ method: "eth_requestAccounts" })
+				// 	.then(handleNewAccounts)
+				// 	.catch((err) =>
+				// 		toast.error(err.message, {
+				// 			position: "top-right",
+				// 			autoClose: 5000,
+				// 			hideProgressBar: false,
+				// 			closeOnClick: true,
+				// 			pauseOnHover: true,
+				// 			draggable: false,
+				// 			progress: undefined,
+				// 		})
+				// 	);
 			}
 		}
 	}, [accounts]);
@@ -71,7 +71,7 @@ export function OnBoardingButton() {
 			window.location.reload();
 		}
 		function handleIntitalChainId(data) {
-			if (data !== "0x4") {
+			if (data !== "0x66EED") {
 				//trigger modal display
 				dispatch(showChangeNWmodal(true));
 			} else {
@@ -140,7 +140,7 @@ export function OnBoardingButton() {
 	};
 	return (<>
 		{accounts.length > 0 ? null : <a
-			className={!isDisabled ? "btn btn-connect" : "btn btn-connect disabled"}
+			className={!isDisabled ? "btn btn-connect" : "btn btn-connect disabled" }
 			onClick={onClick}
 		>
 			{buttonText}

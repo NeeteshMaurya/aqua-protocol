@@ -1,6 +1,6 @@
 import Web3 from "web3";
 
-export let addressInvest = "0xB5C20144b4EC85E91174dBA27361dc4Fd7Fcd6F9";
+export let addressInvest = "0xe64b8691FC9d9ffb06a5310F0b0D6840545eF4C9";
 let investABI = [
 	{
 		"inputs": [],
@@ -1269,7 +1269,7 @@ let investABI = [
 		"type": "receive"
 	}
 ];
-let addressWhiteList = "0x34FA4d599A2Ee066d9B71F3f5B3a61baa2DAbe22";
+let addressWhiteList = "0xc8B6a7197cbc6025d94D407fe3D19D0c41d1327A";
 
 let whiteListABI = [
 	{
@@ -2961,7 +2961,7 @@ let lockdealABI = [
 		"type": "receive"
 	}
 ]
-let lockDealAddress = "0x9249288484Ed81772cc24701e11827cba7E9370C"
+let lockDealAddress = "0xecd9166eADbc247e40e2d7e6bC265DAe64005935"
 
 let vestingABI = [
 	{
@@ -3545,7 +3545,7 @@ let vestingABI = [
 	}
 ]
 
-let vestingAddress = "0xa4c4ae9E0E35Bcc1e73e8d6ffeC1887C93F66b30"
+let vestingAddress = "0x363Da6E6F2f11EDAa6C9B687b679d473569ED6c4"
 
 
 

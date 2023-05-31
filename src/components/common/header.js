@@ -54,6 +54,7 @@ const Header = () => {
 	useEffect(() => {
 		if (localStorage.getItem("account")) {
 			let account = localStorage.getItem("account");
+			console.log(account)
 			dispatch(saveAccounts(JSON.parse(account)));
 		}
 	}, []);

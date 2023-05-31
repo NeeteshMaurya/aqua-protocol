@@ -12,7 +12,7 @@ import apiConstants from "../../api/constants";
 import axios from "axios";
 
 // const apiURL = require("../../api/config").API_SERVER;
-const apiURL = "https://api.solclout.com";
+const apiURL = "http://localhost:8080"; //"https://api.solclout.com";
 
 export const saveBalance = (data) => {
 	return {
@@ -57,12 +57,14 @@ export const showChangeNWmodal = (data) => {
 
 export const getAllPoolsData = () => {
 	return (dispatch) => {
+
 		//showLoader
 		axios
 			.get(apiURL + apiConstants.GET_ALL_POOLS.URL)
 			.then((response) => {
 				if (response.data.success) {
 					dispatch(saveAllPoolsData(response.data.data));
+					console.log(response);
 				} else {
 					console.log(response);
 				}

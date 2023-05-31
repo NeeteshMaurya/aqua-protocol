@@ -28,7 +28,7 @@ const HomePage = () => {
 	useEffect(() => {
 		const { ethereum } = window;
 
-		if (ethereum && ethereum.chainId && ethereum.chainId !== "0x4") {
+		if (ethereum && ethereum.chainId && ethereum.chainId !== "0x66EED") {
 			console.log(ethereum.chainId);
 			toogle();
 		}
