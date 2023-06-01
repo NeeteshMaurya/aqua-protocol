@@ -10,9 +10,9 @@ import {
 
 import apiConstants from "../../api/constants";
 import axios from "axios";
-
+const API_SERVER = process.env.REACT_APP_SERVER
 // const apiURL = require("../../api/config").API_SERVER;
-const apiURL = "http://localhost:8080"; //"https://api.solclout.com";
+const apiURL = `http://${process.env.REACT_APP_SERVER}`; //"https://api.solclout.com";
 
 export const saveBalance = (data) => {
 	return {

@@ -17,6 +17,8 @@ const Header = () => {
 	};
 	const [y, setY] = useState(window.scrollY);
 
+	//const[wrongnetwork,setwrongnetwork] = useState(true)
+
 	useEffect(() => {
 		window.addEventListener("scroll", (e) => handleNavigation(e));
 
@@ -50,13 +52,16 @@ const Header = () => {
 			setisCopied(false);
 		}, 1000);
 	};
-
+    const {ethereum} = window
 	useEffect(() => {
 		if (localStorage.getItem("account")) {
 			let account = localStorage.getItem("account");
 			console.log(account)
 			dispatch(saveAccounts(JSON.parse(account)));
 		}
+		// if(ethereum && ethereum.chainId && ethereum.chainId !== "0x66eed"){
+		// 	setwrongnetwork(false)
+		// }
 	}, []);
 	const extensionLink = () => {
 		window.open("https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/", "_blank");
@@ -92,7 +97,7 @@ const Header = () => {
 				{/* <button className="btn-pools header-btn">
 					All Pools
 				</button> */}
-
+                {/* {wrongnetwork ? <div style={{color: "red"}}>Wrong Network</div> : <div></div>} */}
 				{[add][0] !== undefined ? (
 					<div className="accountDetails-wrapper">
 						<div className="img-info-wrapper">
