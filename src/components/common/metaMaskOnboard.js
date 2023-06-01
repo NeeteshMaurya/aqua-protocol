@@ -1,5 +1,5 @@
 import MetaMaskOnboarding from "@metamask/onboarding";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { toEther } from "../../interface/web3Instance";
@@ -27,12 +27,15 @@ export function OnBoardingButton() {
 	}, []);
 
 	React.useEffect(() => {
-		if (MetaMaskOnboarding.isMetaMaskInstalled()) {
+		if (MetaMaskOnboarding.isMetaMaskInstalled() ) {
+			
 			if (accounts.length > 0) {
+				console.log("here")
 				setButtonText(CONNECTED_TEXT);
 				setDisabled(true);
 				onboarding.current.stopOnboarding();
 			} else {
+				console.log("else")
 				function handleNewAccounts(newAccounts) {
 					dispatch(saveAccounts(newAccounts));
 					setAccounts(newAccounts);
@@ -114,6 +117,7 @@ export function OnBoardingButton() {
 	}, [accounts]);
 
 	const onClick = () => {
+		console.log(accounts.length)
 		function handleNewAccounts(newAccounts) {
 			dispatch(saveAccounts(newAccounts));
 			setAccounts(newAccounts);

@@ -27,7 +27,7 @@ const ChangeNetwork = (props) => {
 							<span onClick={toogle}>X</span>
 						</div>
 						<div className="modal-body">
-							<p>Please connect to the appropriate Etherium network</p>
+							<p>Please switch your network!</p>
 						</div>
 						<div className="modal-footer">
 							<a

@@ -109,7 +109,7 @@ const Header = () => {
 						</div>
 					</div>
 				) : (
-					// <OnBoardingButton />
+					 //<OnBoardingButton />
 					<div className="header-wallet">
 						{allpools ? <div onClick={extensionLink} className="scroll-active-button" >Connect Wallet</div> :
 							null

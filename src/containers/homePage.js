@@ -20,17 +20,18 @@ const HomePage = () => {
 		setShowNetworkModal(!ShowNetworkModal);
 	};
 	const dispatch = useDispatch();
+	const { ethereum } = window;
 
 	useEffect(() => {
 		dispatch(getAllPoolsData());
 	}, []);
 
 	useEffect(() => {
-		const { ethereum } = window;
 
-		if (ethereum && ethereum.chainId && ethereum.chainId !== "0x66EED") {
+		if (ethereum && ethereum.chainId && ethereum.chainId !== "0x66eed") {
 			console.log(ethereum.chainId);
 			toogle();
+			console.log(ethereum.chainId);
 		}
 	}, []);
 
@@ -42,7 +43,7 @@ const HomePage = () => {
 			</Helmet>
 
 			<Introduction />
-			<ChangeNetwork showModal={ShowNetworkModal} toogle={toogle} />
+			{/* <ChangeNetwork showModal={ShowNetworkModal} toogle={toogle} /> */}
 			<UpcomingPools />
 			<FeaturedPools />
 			<Subscribe />
