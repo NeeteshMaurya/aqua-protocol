@@ -9,7 +9,7 @@ const ChangeNetwork = (props) => {
 			ethereum
 				.request({
 					method: "wallet_switchEthereumChain",
-					params: [{ chainId: "0x9b" }],
+					params: [{ chainId: "0x66EED" }],
 				})
 				.then((val) => console.log(val));
 		}
