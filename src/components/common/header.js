@@ -5,6 +5,7 @@ import logo from "../../assets/images/mainIcons/Avatar.png";
 import { outlineIcon } from "../../services/icons";
 import copy from "../../assets/images/mainIcons/copy.svg";
 import ethIcon from "../../assets/images/mainIcons/ethIcon.png";
+import MetaMaskOnboarding from "@metamask/onboarding";
 import { OnBoardingButton } from "./metaMaskOnboard";
 import { toEther } from "../../interface/web3Instance";
 import { saveAccounts } from "../../reduxStore/Actions/actionCreator";
@@ -17,7 +18,7 @@ const Header = () => {
 	};
 	const [y, setY] = useState(window.scrollY);
 
-	//const[wrongnetwork,setwrongnetwork] = useState(true)
+	const[wrongnetwork,setwrongnetwork] = useState(true)
 
 	useEffect(() => {
 		window.addEventListener("scroll", (e) => handleNavigation(e));
@@ -59,10 +60,12 @@ const Header = () => {
 			console.log(account)
 			dispatch(saveAccounts(JSON.parse(account)));
 		}
-		// if(ethereum && ethereum.chainId && ethereum.chainId !== "0x66eed"){
-		// 	setwrongnetwork(false)
-		// }
 	}, []);
+	useEffect(() => {
+		if(ethereum && ethereum.chainId && ethereum.chainId === "0x66eed"){
+			setwrongnetwork(false)
+		}
+	})
 	const extensionLink = () => {
 		window.open("https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/", "_blank");
 	}
@@ -76,6 +79,7 @@ const Header = () => {
 		setAllpools(true)
 	}
 	let [add] = useSelector((state) => state.globalReducer.accounts);
+	//let bal = useSelector((state) => state.globalReducer.balance);
 	return (
 		<header>
 			<div className="bg bgscreen-1" >
@@ -94,12 +98,10 @@ const Header = () => {
 					All Pools
 				</div>}
 
-				{/* <button className="btn-pools header-btn">
-					All Pools
-				</button> */}
-                {/* {wrongnetwork ? <div style={{color: "red"}}>Wrong Network</div> : <div></div>} */}
-				{[add][0] !== undefined ? (
+
+				{([add][0] !== undefined && balance)? 
 					<div className="accountDetails-wrapper">
+						{wrongnetwork ? <div style={{border:"2px",borderColor:"white",borderRadius:"5px",color: "red",marginLeft: "50px",fontSize:"20px",fontWeight:"bold"}}>Wrong Network</div> : <div></div>}
 						<div className="img-info-wrapper">
 							<p>{balance ? balance.slice(0, 5) : "_"} ETH</p>
 
@@ -113,23 +115,24 @@ const Header = () => {
 							</div>
 						</div>
 					</div>
-				) : (
-					 //<OnBoardingButton />
-					<div className="header-wallet">
-						{allpools ? <div onClick={extensionLink} className="scroll-active-button" >Connect Wallet</div> :
+					: <div className="header-btn">
+						{wrongnetwork ? <div style={{border:"2px",borderColor:"white",borderRadius:"5px",color: "red",marginLeft: "50px",fontSize:"20px",fontWeight:"bold"}}>Wrong Network</div> : <div></div>}
+						<OnBoardingButton />
+
+						{/* <div className="header-wallet">
+						{allpools ? <button onClick={extensionLink} className="scroll-active-button" >Connect Wallet</button> :
 							null
 						}
-
 						{!allpools && y > 450 ? <button onClick={extensionLink} className="scroll-active-button" >Connect Wallet</button> :
 							null}
 						{!allpools && y < 450 ? <i style={{ cursor: "pointer" }} onClick={extensionLink}
 							className="icon-main"
 							dangerouslySetInnerHTML={{ __html: outlineIcon }}
-						></i> : null}
-
-					</div>
-
-				)}
+						></i> : null} 
+					   </div>*/}
+					  </div>
+					
+				}
 			</div>
 		</header>
 	);

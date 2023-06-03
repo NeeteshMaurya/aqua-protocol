@@ -20,7 +20,7 @@ const Introduction = (prop) => {
 				growth
 			</p>
 
-			<OnBoardingButton />
+			{/* <OnBoardingButton /> */}
 		</div>
 	);
 };

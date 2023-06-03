@@ -8,16 +8,25 @@ const MainAuth = (props) => {
 	const toogle = () => {
 		setShowNetworkModal(!ShowNetworkModal);
 	};
-	const { ethereum } = window;
+	//const { ethereum } = window;
 	useEffect(() => {
-
-		if (ethereum && ethereum.chainId && ethereum.chainId !== "0x66eed") {
-			console.log(ethereum.chainId);
-			toogle();
-			console.log(ethereum.chainId);
-		}
+		// if (ethereum && ethereum.chainId && ethereum.chainId !== "0x66eed") {
+		// 	console.log(ethereum.chainId);
+		// 	toogle();
+		// 	console.log(ethereum.chainId);
+		// }
+		checkNetwork()
 	}, []);
-	// console.log(props)
+	const checkNetwork = async()=>{
+		if(window.ethereum){
+			const currentChainId = await window.ethereum.request({
+				method: 'eth_chainId',
+			})
+			if(currentChainId !== '0x66eed'){
+				toogle()
+			}
+		}
+	}
 	return (
 		<div className="main-wrapper">
 			<Header />
