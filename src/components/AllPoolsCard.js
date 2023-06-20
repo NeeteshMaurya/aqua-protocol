@@ -42,9 +42,9 @@ const AllPoolsCard = (props) => {
 									<h4>{data.poolName}</h4>
 								</div>
 
-								<p className="ratio">
+								<p className="ratioo">
 									1 {data.mainCoinSymbol} = {data.swapRatio} {data.tokenSymbol}
-								</p>
+								</p> 
 								<div className="all-pool-status-wrapper">
 									<a
 										className={`btn-status-card all-pool-btn btn btn-${findUpcoming(data.startTimeOfPool) ? "Upcoming" : "Live"
