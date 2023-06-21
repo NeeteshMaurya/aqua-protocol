@@ -8,6 +8,7 @@ import {
 	saveBalance,
 	showChangeNWmodal,
 } from "../../reduxStore/Actions/actionCreator";
+import "../../assets/header.css"
 const ONBOARD_TEXT = "Click here to install MetaMask!";
 const CONNECT_TEXT = "Connect Wallet";
 const CONNECTED_TEXT = "Connected";
@@ -144,7 +145,7 @@ export function OnBoardingButton() {
 	};
 	return (<>
 		{accounts.length > 0 ? null : <a
-			className={!isDisabled ? "btn btn-connect" : "btn btn-connect disabled" }
+			className={!isDisabled ? "navbarbtn btn nav-link text-white buttonn" : "navbarbtn btn nav-link text-white buttonn disabled" }
 			onClick={onClick}
 		>
 			{buttonText}

@@ -4,8 +4,14 @@ import MetaMaskOnboarding from "@metamask/onboarding";
 import { OnBoardingButton } from "./common/metaMaskOnboard";
 import { ContractInstance, getPoolDataSmart } from "../interface/web3Instance";
 import { getProgress, InvestETHFromSmart } from "../services/utlis";
+import { useHistory } from "react-router-dom";
 
 const Introduction = (prop) => {
+
+	const history = useHistory();
+	const pathAllPools = () => {
+		history.push("/allPools");
+	  };
 	return (
 		<div className="main-introduction">
 			<div className="bg bgscreen-2">
@@ -19,7 +25,12 @@ const Introduction = (prop) => {
 				Where users are incentivized to support and participate in project
 				growth
 			</p>
-
+			<div
+				onClick={pathAllPools} style={{fontSize: "18px",fontWeight: "bold",marginLeft: "30px",padding: "10px",marginRight: "20px"}} 
+				className="buttonn navbarbtn btn text-white"
+				>
+					All Pools
+				</div>
 			{/* <OnBoardingButton /> */}
 		</div>
 	);

@@ -85,11 +85,10 @@ const Header = () => {
   let [add] = useSelector((state) => state.globalReducer.accounts);
   //let bal = useSelector((state) => state.globalReducer.balance);
   return (
-    <header>
-    <nav className="navbar navbar-expand-sm" style={{ width: "100%" }}>
+    
+    <nav className="navbar navbar-expand-md navbg navbar-dark" style={{ width: "100%",}}>
 		<div className="container-fluid">
-        <a href="https://www.aquaprotocol.com"><img style={{height:'40px',width:'40px'}} src={logo} alt="logo" /></a>
-        <a className="navbar-brand text-white" style={{marginLeft:'10px',fontWeight:'bold'}} href="https://www.aquaprotocol.com">AQUA PROTOCOL</a>
+        <a href="https://www.aquaprotocol.com"><img className="logo" style={{height:'40px',width:'40px'}} src={logo} alt="logo" /></a>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -100,139 +99,63 @@ const Header = () => {
                 aria-label="Toggle navigation"
               >
                 <span className="navbar-toggler-icon" />
-              </button>
+              </button> 
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
                     <a
-                      type="button"
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: "bold",
-                        marginLeft: "30px",
-                        padding: "10px",
-                        marginRight: "20px",
-                      }}
-                      className="buttonn nav-link btn btn-m text-white"
+                      type="button" 
+                      className="nav-link btn btn-link text-white navbarbtn buttonn"
                       href="https://earn.aquaprotocol.com/farms"
                     >
                       Farms
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a
+                    <div
                       type="button"
-                      style={{
-                        fontSize: "18px",
-                        padding: "10px",
-                        fontWeight: "bold",
-                        marginLeft: "20px",
-                        marginRight: "20px",
-                      }}
-                      className="buttonn nav-link btn btn-m text-white"
+                      className="nav-link btn btn-link navbarbtn text-white buttonn"
                       href="https://earn.aquaprotocol.com/pools"
                     >
                       Pools
-                    </a>
+                    </div>
                   </li>
                   <li className="nav-item">
                     <Link
                       type="button"
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: "bold",
-                        marginLeft: "30px",
-                        padding: "10px",
-                        marginRight: "20px",
-                      }}
-                      className="buttonn nav-link btn btn-m text-white"
+                      className="nav-link navbarbtn btn btn-link text-white buttonn"
                       to="/"
                     >
                       Aquapad
                     </Link>
-                  </li>
-				  <li className="nav-item">
-					{/* {allpools ? (
-						<div type="button" style={{fontSize: "18px",fontWeight: "bold",marginLeft: "30px",padding: "10px",marginRight: "20px",}} 
-            className="buttonn nav-link btn btn-m text-white">All Pools</div>
-					) : ( */}
+                  </li> 
+				  {/* <li className="nav-item">
 						<div
 						onClick={pathAllPools} style={{fontSize: "18px",fontWeight: "bold",marginLeft: "30px",padding: "10px",marginRight: "20px"}} 
 						className="buttonn nav-link btn btn-m text-white"
 						>
 						All Pools
 						</div>
-					{/* )} */}
-          </li>
+          </li> */}
         </ul>
       </div>
       <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
           <li className="nav-item">
           {[add][0] !== undefined && balance ? (
-            // className="accountDetails-wrapper"
-                  <div className="" style={{marginRight:'25px'}}> 
-                    {/* {wrongnetwork ? (
-                      <div
-                        style={{
-                          border: "2px",
-                          borderColor: "white",
-                          borderRadius: "5px",
-                          color: "red",
-                          marginLeft: "50px",
-                          fontSize: "20px",
-                          fontWeight: "bold",
-                        }}
-                      >
-                        Wrong Network
-                      </div>
-                    ) : (
-                      <div></div>
-                    )} */}
-                    <p className="nav-link text-white border border-primary" 
-                    style={{fontWeight:'bold',borderRadius:'24px',padding:'11px'}}>{[add][0].slice(0,7).concat('...')}</p>
-                      {/* <div className="nav-link img-info-wrapper">
-                        {isCopied ? (
-                          <p>Copied!</p>
-                        ) : (
-                          <p>{transformedAddress}</p>
-                        )}
-                        <div className="wallet-icon-wrapper">
-                          <img
-                            onClick={copyClickHandler}
-                            src={copy}
-                            alt="Copy"
-                          ></img>
-                        </div>
-                      </div> */}
-                      </div>  
-                  
-                  ) : (
-                    <div className="nav-link header-btn" style={{marginRight:'25px'}}>
-                      {/* {wrongnetwork ? (<div style={{
-                            border: "2px",
-                            borderColor: "white",
-                            borderRadius: "5px",
-                            color: "red",
-                            marginLeft: "50px",
-                            fontSize: "20px",
-                            fontWeight: "bold",
-                          }}
-                        >
-                          Wrong Network
-                        </div>
-                      ) : (
-                        <div></div>
-                      )} */}
-					            <OnBoardingButton />
-                    </div>
-                  )}
+                  // <div className="nav-link" style={{marginRight:'25px'}}>          
+                    <p className="nav-link text-white border border-primary navbarbtn"
+                    style={{fontWeight:'bold',borderRadius:'24px',
+                    padding:'5px',marginRight:'25px'}}>{[add][0].slice(0,7).concat('...')}</p>
+                  // </div>  
+                  ) :  
+					            <><OnBoardingButton /></>
+                  }
                   </li>
                 </ul>
               </div>
             </div>
-        </nav>
-     </header>
+    </nav>
   );
 };
 

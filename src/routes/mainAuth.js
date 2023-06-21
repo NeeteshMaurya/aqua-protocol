@@ -28,7 +28,8 @@ const MainAuth = (props) => {
 		}
 	}
 	return (
-		<div className="main-wrapper">
+		<div>
+			{/* className="main-wrapper" */}
 			<Header />
 			<ChangeNetwork showModal={ShowNetworkModal} toogle={toogle} />
 			<BackgroungImg />
