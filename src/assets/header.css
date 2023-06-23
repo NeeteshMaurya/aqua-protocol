@@ -1,6 +1,6 @@
 .buttonn:hover{
-    background-color: #1214FD;
-    border-radius: 15px;
+    background-color: #cbccdb;
+    border-radius: 10px;
 }
 
 .logo{
@@ -9,18 +9,22 @@
     margin-bottom: 12px; */
 }
 .navbg{
-    background-color: #040306;
+    background-color:#faf9f6;
 }
 .navbarbtn{
-    font-family: Blatant;
+    font-family: Quicksand, sans-serif;
     font-size: 16px;
-    font-weight: bold;
-    margin-left: 40px;
+    margin-left: 30px;
     padding: 5px;
     margin-right: 20px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background: #1214FD;
+    /* margin-top: 15px;
+    margin-bottom: 15px; */
+    /* background: #1214FD; */
     border-radius: 0%;
+}
+.connectwalletbtn{
+    background: #06f;
+    border: 1px, solid, #cbccdb;
+    border-radius: 15px;
 }
 

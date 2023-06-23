@@ -35,7 +35,7 @@ const Footer = (props) => {
 				</div>
 			</div>
 			<div className="footer-bottom-wrapper">
-				<p>© AQUA PROTOCOL, 2021. All rights reserved</p>
+				<p>© AQUA PROTOCOL, 2023. All rights reserved</p>
 				<div>
 					<p>Privacy Policy</p>
 					<p>Terms and Conditions</p>

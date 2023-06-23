@@ -27,7 +27,7 @@ const Introduction = (prop) => {
 			</p>
 			<div
 				onClick={pathAllPools} style={{fontSize: "18px",fontWeight: "bold",marginLeft: "30px",padding: "10px",marginRight: "20px"}} 
-				className="buttonn navbarbtn btn text-white"
+				className="buttonn connectwalletbtn navbarbtn btn text-white"
 				>
 					All Pools
 				</div>

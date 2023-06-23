@@ -145,7 +145,7 @@ export function OnBoardingButton() {
 	};
 	return (<>
 		{accounts.length > 0 ? null : <a
-			className={!isDisabled ? "navbarbtn btn nav-link text-white buttonn" : "navbarbtn btn nav-link text-white buttonn disabled" }
+			className={!isDisabled ? "navbarbtn btn nav-link text-white buttonn connectwalletbtn" : "connectwalletbtn navbarbtn btn nav-link text-white buttonn disabled" }
 			onClick={onClick}
 		>
 			{buttonText}

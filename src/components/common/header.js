@@ -89,6 +89,8 @@ const Header = () => {
     <nav className="navbar navbar-expand-md navbg navbar-dark" style={{ width: "100%",}}>
 		<div className="container-fluid">
         <a href="https://www.aquaprotocol.com"><img className="logo" style={{height:'40px',width:'40px'}} src={logo} alt="logo" /></a>
+        <a className="navbar-brand" style={{marginLeft:"18px",fontWeight:'bold',fontFamily:'sans-serif',color:'#0000ff'}}
+         href="https://www.aquaprotocol.com">AQUA PROTOCOL</a>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -105,25 +107,25 @@ const Header = () => {
                   <li className="nav-item">
                     <a
                       type="button" 
-                      className="nav-link btn btn-link text-white navbarbtn buttonn"
+                      className="nav-link btn btn-link text-dark navbarbtn buttonn"
                       href="https://earn.aquaprotocol.com/farms"
                     >
                       Farms
                     </a>
                   </li>
                   <li className="nav-item">
-                    <div
+                    <a
                       type="button"
-                      className="nav-link btn btn-link navbarbtn text-white buttonn"
+                      className="nav-link btn btn-link navbarbtn text-dark buttonn"
                       href="https://earn.aquaprotocol.com/pools"
                     >
                       Pools
-                    </div>
+                    </a>
                   </li>
                   <li className="nav-item">
                     <Link
                       type="button"
-                      className="nav-link navbarbtn btn btn-link text-white buttonn"
+                      className="nav-link navbarbtn btn btn-link text-dark buttonn"
                       to="/"
                     >
                       Aquapad
@@ -144,7 +146,7 @@ const Header = () => {
           <li className="nav-item">
           {[add][0] !== undefined && balance ? (
                   // <div className="nav-link" style={{marginRight:'25px'}}>          
-                    <p className="nav-link text-white border border-primary navbarbtn"
+                    <p className="nav-link text-dark m-auto border border-primary navbarbtn"
                     style={{fontWeight:'bold',borderRadius:'24px',
                     padding:'5px',marginRight:'25px'}}>{[add][0].slice(0,7).concat('...')}</p>
                   // </div>  
