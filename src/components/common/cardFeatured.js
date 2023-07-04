@@ -51,7 +51,7 @@ const CardFeatured = (props) => {
 					return (
 						<div
 							onClick={() => featuredPoolsHandler(data._id)}
-							className="CardFeatured"
+							className="CardFeatured" style={{borderRadius:'2px',background:'rgba(20,30,50,0.80)'}}
 						>
 							<div className="CardFeatured-wrapper">
 								<div className="CardUpcoming-header">
