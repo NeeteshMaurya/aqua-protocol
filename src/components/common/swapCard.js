@@ -28,31 +28,31 @@ const SwapCard = (props) => {
 		return val;
 	};
 	return (
-		<div className="swapcard-wrapper">
+		<div className="swapcard-wrapper" style={{borderRadius:'2px',background:'rgba(20,30,50,0.80)'}}>
 			<div className="wrapper-inner">
 				<div className="info-1">
-					<p className="psize16Bold title">Swap Amount</p>
-					<p className="value">
+					<p style={{fontFamily:'avenir',color:'white'}} className="psize16Bold title">Swap Amount</p>
+					<p style={{fontFamily:'avenir',color:'white'}} className="value">
 						1 {data.mainCoinSymbol} = {data.swapRatio} {data.tokenSymbol}
 					</p>
 				</div>
 				<div className="info-2">
-					<h2 className="h2-32-42Bold">
+					<h2 style={{fontFamily:'avenir',color:'white'}} className="h2-32-42Bold">
 						{data.amountofTokenInPool} {data.tokenSymbol}
 					</h2>
-					<p className="psize14Normal value">
+					<p style={{fontFamily:'avenir',color:'white'}} className="psize14Normal value">
 						{data.totalRaise} {data.mainCoinSymbol}
 					</p>
 				</div>
-				<p className="psize16Bold title-closes-in">
+				<p style={{fontFamily:'avenir',color:'white'}} className="psize16Bold title-closes-in">
 					{!findUpcoming(data.startTimeOfPool) ? "Closes in" : "Opens in"}
 				</p>
-				<h2 className="h2-32-42Bold title-hours">
+				<h2 style={{fontFamily:'avenir',color:'white'}} className="h2-32-42Bold title-hours">
 					{findUpcoming(data.startTimeOfPool)
 						? getFullTimeLeft(data.startTimeOfPool, "upcoming")
 						: getFullTimeLeft(data.finishTimeOfPool, "featured")}
 				</h2>
-				<p className="psize16Bold title swap-progress">Swap Progress</p>
+				<p style={{fontFamily:'avenir',color:'white'}} className="psize16Bold title swap-progress">Swap Progress</p>
 				<div className="progress-bar">
 					<div className="base-progress">
 						<p
@@ -61,16 +61,17 @@ const SwapCard = (props) => {
 									totalLeft,
 									data.amountofTokenInPool
 								)}%`,
+								fontFamily:'avenir',color:'white'
 							}}
 						></p>
 					</div>
 				</div>
 				<div className="info-footer">
-					<p className="psize14Normal">
+					<p style={{fontFamily:'avenir',color:'white'}} className="psize14Normal">
 						{calcPercentage(totalLeft, data.amountofTokenInPool)}%
 					</p>
 
-					<p className="psize14Normal">
+					<p style={{fontFamily:'avenir',color:'white'}} className="psize14Normal">
 						{totalLeft}/{data.amountofTokenInPool}
 					</p>
 				</div>

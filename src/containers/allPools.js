@@ -135,12 +135,12 @@ const AllPools = () => {
 					<OnBoardingButton />
 				</div>
 
-				<h2 className="heading30">All Pools</h2>
+				<h2 style={{fontFamily:'avenir',color:'white'}} className="heading30">All Pools</h2>
 				<div className="allPools-search-status">
-					<div className="input-search-wrapper">
+					<div className="input-search-wrapper" style={{border:'1px solid #2b3750'}}>
 						<img src={Search}></img>
 
-						<input
+						<input style={{fontFamily:'avenir',color:'white'}}
 							onChange={handleChange}
 							placeholder={X < 769 ? "Search" : "Search by Pool ID, Token name, etc"}
 							value={inputValue}
@@ -165,14 +165,14 @@ const AllPools = () => {
 					<CloseSearchIcon><span onClick={closeMobileSearchHandler} >x</span></CloseSearchIcon>
 				</MobileSearchWrapper> : null}
 				{allPoolsState && allPoolsState.length > 0 ?
-					<div className="all-pools-table-wrapper">
+					<div className="all-pools-table-wrapper" style={{borderRadius:'5px',border:'1px solid #2b3750'}}>
 						<div className="border-title-wrapper-head">
 							<div className="table-titles-wrapper">
-								<p>Pool Name</p>
-								<p>Ratio</p>
-								<p>Status</p>
-								<p>Progress</p>
-								<p>Access</p>
+								<p style={{fontFamily:'avenir',color:'white'}}>Pool Name</p>
+								<p style={{fontFamily:'avenir',color:'white'}}>Ratio</p>
+								<p style={{fontFamily:'avenir',color:'white'}}>Status</p>
+								<p style={{fontFamily:'avenir',color:'white'}}>Progress</p>
+								<p style={{fontFamily:'avenir',color:'white'}}>Access</p>
 							</div>
 						</div>
 

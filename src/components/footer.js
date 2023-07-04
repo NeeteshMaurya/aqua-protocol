@@ -17,7 +17,7 @@ const Footer = (props) => {
 			<div className="footer-top-wrapper">
 				<div className="icon-name">
 					<img src={Logo} alt="site Logo" />
-					<p>AQUA PROTOCOL</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>AQUA PROTOCOL</p>
 				</div>
 				<div className="social-icons">
 					<a target="_blank"> 
@@ -35,10 +35,10 @@ const Footer = (props) => {
 				</div>
 			</div>
 			<div className="footer-bottom-wrapper">
-				<p>© AQUA PROTOCOL, 2023. All rights reserved</p>
+				<p style={{fontFamily:'avenir',color:'white'}}>© AQUA PROTOCOL, 2023. All rights reserved</p>
 				<div>
-					<p>Privacy Policy</p>
-					<p>Terms and Conditions</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>Privacy Policy</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>Terms and Conditions</p>
 				</div>
 			</div>
 		</footer>

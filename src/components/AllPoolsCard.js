@@ -39,15 +39,15 @@ const AllPoolsCard = (props) => {
 							<div className="allPoolsCard-wrapper">
 								<div className="poolname-Wrapper">
 									<img src={data.projectLogo} alt="App icon"></img>
-									<h4>{data.poolName}</h4>
+									<h4 style={{fontFamily:'avenir',color:'white'}}>{data.poolName}</h4>
 								</div>
 
-								<p className="ratioo">
+								<p style={{fontFamily:'avenir',color:'white'}} className="ratioo">
 									1 {data.mainCoinSymbol} = {data.swapRatio} {data.tokenSymbol}
 								</p> 
 								<div className="all-pool-status-wrapper">
-									<a
-										className={`btn-status-card all-pool-btn btn btn-${findUpcoming(data.startTimeOfPool) ? "Upcoming" : "Live"
+									<a style={{borderRadius:'2px',fontFamily:'avenir'}}
+										className={`btn-status-card connectwalletbtn all-pool-btn btn btn-${findUpcoming(data.startTimeOfPool) ? "Upcoming" : "Live"
 											}`}
 									>
 										{findUpcoming(data.startTimeOfPool) ? "Upcoming" : <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}
@@ -57,10 +57,10 @@ const AllPoolsCard = (props) => {
 								</div>
 
 								<div className="allpools-progress-wrapper">
-									{data.totalLeft ? <p>
+									{data.totalLeft ? <p style={{fontFamily:'avenir',color:'white'}}>
 										{Math.round((data.totalLeft / data.amountofTokenInPool) * 100)}%
 										{/* {calcPercentage(data.totalLeft, data.amountofTokenInPool)}% */}
-									</p> : <p>0%</p>}
+									</p> : <p style={{fontFamily:'avenir',color:'white'}}>0%</p>}
 									<span>
 										{data.totalLeft ? <p
 											style={{
@@ -68,11 +68,12 @@ const AllPoolsCard = (props) => {
 													data.totalLeft,
 													data.amountofTokenInPool
 												)}%`,
+												fontFamily:'avenir',color:'white'
 											}}
-										></p> : <p style={{ width: '0%' }} ></p>}
+										></p> : <p style={{ width: '0%',fontFamily:'avenir',color:'white' }} ></p>}
 									</span>
 								</div>
-								<p className="Access">{data.accessType}</p>
+								<p style={{fontFamily:'avenir',color:'white'}} className="Access">{data.accessType}</p>
 							</div>
 						</div>
 					);

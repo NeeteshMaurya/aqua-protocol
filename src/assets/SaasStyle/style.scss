@@ -179,9 +179,9 @@ input[type="number"]::-webkit-outer-spin-button {
       width: 100%;
       cursor: pointer;
 
-      &:hover {
-        background: rgba(60, 128, 255, 0.1);
-      }
+      // &:hover {
+      //   background: rgba(60, 128, 255, 0.1);
+      // }
       .dd-entry {
         padding-top: 11px;
         padding-bottom: 9px;
@@ -212,9 +212,9 @@ input[type="number"]::-webkit-outer-spin-button {
       width: 100%;
       cursor: pointer;
 
-      &:hover {
-        background: rgba(60, 128, 255, 0.1);
-      }
+      // &:hover {
+      //   background: rgba(60, 128, 255, 0.1);
+      // }
       .dd-entry {
         padding-top: 11px;
         padding-bottom: 9px;
@@ -285,9 +285,9 @@ input[type="number"]::-webkit-outer-spin-button {
       width: 100%;
       cursor: pointer;
 
-      &:hover {
-        background: rgba(60, 128, 255, 0.1);
-      }
+      // &:hover {
+      //   background: rgba(60, 128, 255, 0.1);
+      // }
       .dd-entry {
         padding-top: 11px;
         padding-bottom: 9px;
@@ -303,9 +303,9 @@ input[type="number"]::-webkit-outer-spin-button {
       width: 100%;
       cursor: pointer;
 
-      &:hover {
-        background: rgba(60, 128, 255, 0.1);
-      }
+      // &:hover {
+      //   background: rgba(60, 128, 255, 0.1);
+      // }
       .dd-entry {
         padding-top: 11px;
         padding-bottom: 9px;
@@ -336,11 +336,11 @@ input[type="number"]::-webkit-outer-spin-button {
   max-height: 48px;
   outline: none;
   z-index: 1;
-  &:hover {
-    background: rgba(60, 128, 255, 0.1);
-    border: 1px solid $MainbuttonBlueActive;
-    border-radius: 42px;
-  }
+  // &:hover {
+  //   background: rgba(60, 128, 255, 0.1);
+  //   border: 1px solid $MainbuttonBlueActive;
+  //   border-radius: 42px;
+  // }
   &:active {
     background: #3c80ff;
     border-radius: 42px;
@@ -361,10 +361,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
   cursor: pointer;
 
-  &:hover {
-    background: #3c80ff;
-    border-radius: 42px;
-  }
+  // &:hover {
+  //   background: #3c80ff;
+  //   border-radius: 42px;
+  // }
   &.disabled {
     background: rgba(129, 129, 129, 0.1);
     border: 1px solid #686e73;
@@ -394,12 +394,12 @@ input[type="number"]::-webkit-outer-spin-button {
   cursor: not-allowed;
   color: #686e73;
   pointer-events: none;
-  &:hover {
-    background: rgba(129, 129, 129, 0.1);
-  }
+  // &:hover {
+  //   background: rgba(129, 129, 129, 0.1);
+  // }
 }
 .btn-status-card {
-  padding: 6px 12px;
+  padding-right: 12px;
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -411,6 +411,9 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: row;
 }
+// }:hover{
+//   color: 'white'
+// }
 .btn-Live {
   background: rgba(82, 128, 228, 0.2);
 
@@ -510,17 +513,17 @@ input[type="number"]::-webkit-outer-spin-button {
   background: #14264b;
   border-radius: 32px;
   cursor: pointer;
-  &:hover {
-    background: linear-gradient(
-        0deg,
-        rgba(60, 128, 255, 0.15),
-        rgba(60, 128, 255, 0.15)
-      ),
-      #14264b;
-    /* White/10 */
+  // &:hover {
+  //   background: linear-gradient(
+  //       0deg,
+  //       rgba(60, 128, 255, 0.15),
+  //       rgba(60, 128, 255, 0.15)
+  //     ),
+  //     #14264b;
+  //   /* White/10 */
 
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
+  //   border: 1px solid rgba(255, 255, 255, 0.1);
+  // }
 
   .CardUpcoming-wrapper {
     margin: 32px;
@@ -604,17 +607,17 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 32px;
   cursor: pointer;
   margin-top: 32px;
-  &:hover {
-    background: linear-gradient(
-        0deg,
-        rgba(60, 128, 255, 0.15),
-        rgba(60, 128, 255, 0.15)
-      ),
-      #14264b;
-    /* White/10 */
+  // &:hover {
+  //   background: linear-gradient(
+  //       0deg,
+  //       rgba(60, 128, 255, 0.15),
+  //       rgba(60, 128, 255, 0.15)
+  //     ),
+  //     #14264b;
+  //   /* White/10 */
 
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
+  //   border: 1px solid rgba(255, 255, 255, 0.1);
+  // }
 
   .CardFeatured-wrapper {
     margin: 32px;
@@ -755,10 +758,11 @@ input[type="number"]::-webkit-outer-spin-button {
   cursor: pointer;
   height: 80px;
   position: relative;
-  &:hover {
-    background: rgba(60, 128, 255, 0.1);
-    border-radius: 32px;
-  }
+
+  // &:hover {
+  //   background: rgba(60, 128, 255, 0.1);
+  //   border-radius: 32px;
+  // }
   .allPoolsCard-wrapper {
     width: 100%;
     font-size: 1.125rem;
@@ -995,9 +999,9 @@ input[type="number"]::-webkit-outer-spin-button {
         padding-right: 32px;
         cursor: pointer;
         color: white;
-        &:hover {
-          color: white;
-        }
+        // &:hover {
+        //   color: white;
+        // }
         &:active {
           color: white;
         }
@@ -1334,11 +1338,11 @@ input[type="number"]::-webkit-outer-spin-button {
 .modal-wrapper-subscribe {
   position: absolute;
   bottom: 10%;
-  background: #14264b;
+  background: black;
   left: 33.33%;
   width: 33.33%;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 32px;
+  border-radius: 2px;
   z-index: 50;
   .modal-header {
     display: flex;
@@ -1941,11 +1945,11 @@ header {
       margin-bottom: 137px;
       width: fit-content;
     }
-    .subscribe-btn:hover {
-      background: rgba(60, 128, 255, 0.1);
-      border: 1px solid $MainbuttonBlueActive;
-      border-radius: 42px;
-    }
+    // .subscribe-btn:hover {
+    //   background: rgba(60, 128, 255, 0.1);
+    //   border: 1px solid $MainbuttonBlueActive;
+    //   border-radius: 42px;
+    // }
     .subscribe-btn:active {
       border-radius: 42px;
     }
@@ -2815,7 +2819,7 @@ header {
     z-index: 1;
   }
   .btn-status-card {
-    padding: 4px 12px;
+    padding-right: 12px;;
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
@@ -3070,9 +3074,9 @@ header {
           padding-right: 32px;
           cursor: pointer;
           color: white;
-          &:hover {
-            color: white;
-          }
+          // &:hover {
+          //   color: white;
+          // }
           &:active {
             color: white;
           }
@@ -3818,9 +3822,9 @@ header {
           cursor: pointer;
 
           // position: static;
-          &:hover {
-            background: rgba(60, 128, 255, 0.1);
-          }
+          // &:hover {
+          //   background: rgba(60, 128, 255, 0.1);
+          // }
           .allPoolsCard-wrapper {
             width: 90.67%;
             margin-left: auto;

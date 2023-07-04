@@ -7,19 +7,19 @@ const TableInfo3 = (props) => {
 		return mobileAdd;
 	};
 	return (
-		<div className="table tab-info-1">
+		<div className="table tab-info-1" style={{borderRadius:'4px'}}>
 			<div className="table-title">
-				<p>Links</p>
+				<p style={{fontFamily:'avenir',color:'white'}}>Links</p>
 			</div>
 			<div className="table-body body-links">
 				<div className="body-info-wrapper">
-					<p>Website</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>Website</p>
 					<a target="_blank" href={data.website}>
 						{data.website.split("//").pop()}
 					</a>
 				</div>
 				<div className="body-info-wrapper">
-					<p>Whitepaper</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>Whitepaper</p>
 					<a target="_blank" href={data.whitePaper}>
 						{data.whitePaper.length > 30
 							? trimAdd(data.whitePaper.split("//").pop())
@@ -27,7 +27,7 @@ const TableInfo3 = (props) => {
 					</a>
 				</div>
 				<div className="body-info-wrapper">
-					<p>Twitter</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>Twitter</p>
 					<a target="_blank" href={data.twitter}>
 						{data.twitter.split("//").pop()}
 					</a>

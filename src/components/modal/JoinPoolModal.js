@@ -323,12 +323,12 @@ const JoinPoolModal = (props) => {
 
 					<form style={{ height: "579px" }} onSubmit={handleSubmit} className="modal-wrapper">
 						<div className="modal-header">
-							<p>Join Pool</p>
+							<p style={{fontFamily:'avenir',color:'white'}}>Join Pool</p>
 							<span onClick={toogle}>X</span>
 						</div>
 						<div style={{ maxHeight: "395px" }} className="modal-body join-pool-wrapper">
 							<div className="from-wrapper">
-								<p>From</p>
+								<p style={{fontFamily:'avenir',color:'white'}}>From</p>
 								<div style={{ marginBottom: "34px" }} className="from">
 									<input style={{ cursor: "pointer" }}
 										ref={inputRef}
@@ -342,37 +342,37 @@ const JoinPoolModal = (props) => {
 									/>
 
 									<div className="max-min-wrapper">
-										<a
+										<a style={{fontFamily:'avenir',color:'white'}}
 											onClick={maxAllocationHandler}
 											className="btn btn-pools max-min"
 										>
 											MAX
 										</a>
-										<a style={{ border: "none" }} className="btn btn-pools max-min">{mainCSymbol}</a>
+										<a style={{ border: "none" ,fontFamily:'avenir',color:'white'}} className="btn btn-pools max-min">{mainCSymbol}</a>
 									</div>
 								</div>
 
 							</div>
-							<p style={{ height: "44px", color: "rgba(238, 63, 63, 0.753)" }} className="error-msg">{errorMsg}</p>
+							<p style={{ height: "44px", color: "rgba(238, 63, 63, 0.753)",fontFamily:'avenir',color:'white' }} className="error-msg">{errorMsg}</p>
 							<div className="from-wrapper">
-								<p style={{}}>To</p>
+								<p style={{fontFamily:'avenir',color:'white'}}>To</p>
 								<div style={{ marginBottom: "22px" }} className="to">
-									<h2>{swapRatio * inputValue.valueInEth}</h2>
-									<h2>{tokenSymbol}</h2>
+									<h2 style={{fontFamily:'avenir',color:'white'}}>{swapRatio * inputValue.valueInEth}</h2>
+									<h2 style={{fontFamily:'avenir',color:'white'}}>{tokenSymbol}</h2>
 								</div>
 							</div>
 							<div className="joinPool-info-wrapper">
 								<div className="joinPool-info">
-									<p>Balance: </p>
-									{mainCAddress === "0x0000000000000000000000000000000000000000" ? <p>{trimBalance(balanceEth)} {mainCSymbol}</p> : <p>{ercbalance} {mainCSymbol}</p>}
+									<p style={{fontFamily:'avenir',color:'white'}}>Balance: </p>
+									{mainCAddress === "0x0000000000000000000000000000000000000000" ? <p style={{fontFamily:'avenir',color:'white'}}>{trimBalance(balanceEth)} {mainCSymbol}</p> : <p>{ercbalance} {mainCSymbol}</p>}
 								</div>
 								<div className="joinPool-info">
-									<p>Remaining:</p>
-									{mainCAddress === "0x0000000000000000000000000000000000000000" ? <p>{trimBalance(balanceEth - inputValue.valueInEth)} {mainCSymbol}</p> : <p>{trimBalance(ercbalance - inputValue.valueInEth)} {mainCSymbol}</p>}
+									<p style={{fontFamily:'avenir',color:'white'}}>Remaining:</p>
+									{mainCAddress === "0x0000000000000000000000000000000000000000" ? <p style={{fontFamily:'avenir',color:'white'}}>{trimBalance(balanceEth - inputValue.valueInEth)} {mainCSymbol}</p> : <p>{trimBalance(ercbalance - inputValue.valueInEth)} {mainCSymbol}</p>}
 								</div>
 							</div>
 						</div>
-						<div style={{ paddingTop: "34px" }} className="modal-footer joinPool-footer">
+						<div style={{ paddingTop: "34px",fontFamily:'avenir',color:'white',borderRadius:'2px',background:'#1214fd' }} className="modal-footer joinPool-footer">
 							<button style={{ width: "100%" }}
 								type={isValid ? "submit" : "button"}
 								className={!isValid ? "btn-disabled" : "btn-connect"}

@@ -129,12 +129,12 @@ const JoinPoolMobile = (props) => {
 					<div onClick={toogle} className="modal-overlay-mobile"></div>
 					<form onSubmit={handleSubmit} className="modal-wrapper-mobile">
 						<div className="modal-header">
-							<p>Join Pool</p>
+							<p style={{fontFamily:'avenir',color:'white'}}>Join Pool</p>
 							<span onClick={toogle}>X</span>
 						</div>
 						<div className="modal-body join-pool-wrapper">
 							<div className="from-wrapper">
-								<p>From</p>
+								<p style={{fontFamily:'avenir',color:'white'}}>From</p>
 								<div className="from">
 									<input
 										ref={inputRef}
@@ -148,38 +148,38 @@ const JoinPoolMobile = (props) => {
 									/>
 
 									<div className="max-min-wrapper">
-										<a
+										<a style={{fontFamily:'avenir',color:'white'}}
 											onClick={maxAllocationHandler}
 											className="btn btn-pools max-min"
 										>
 											Max
 										</a>
-										<a className="btn btn-pools max-min">ETH</a>
+										<a style={{fontFamily:'avenir',color:'white'}} className="btn btn-pools max-min">ETH</a>
 									</div>
 								</div>
 
 							</div>
-							<p style={{ height: "44px", color: "rgba(238, 63, 63, 0.753)" }} className="error-msg">{errorMsg}</p>
+							<p  style={{ height: "44px", color: "rgba(238, 63, 63, 0.753)",fontFamily:'avenir',color:'white' }} className="error-msg">{errorMsg}</p>
 							<div className="from-wrapper">
-								<p style={{ marginTop: "8px" }}>To</p>
+								<p style={{fontFamily:'avenir',color:'white'}} style={{ marginTop: "8px" }}>To</p>
 								<div className="to">
-									<h2>{swapRatio * inputValue.valueInEth}</h2>
-									<h2>{tokenSymbol}</h2>
+									<h2 style={{fontFamily:'avenir',color:'white'}}>{swapRatio * inputValue.valueInEth}</h2>
+									<h2 style={{fontFamily:'avenir',color:'white'}}>{tokenSymbol}</h2>
 								</div>
 							</div>
 							<div className="joinPool-info-wrapper">
 								<div className="joinPool-info">
-									<p>Balance: </p>
-									<p>{balanceEth} ETH</p>
+									<p style={{fontFamily:'avenir',color:'white'}}>Balance: </p>
+									<p style={{fontFamily:'avenir',color:'white'}}>{balanceEth} ETH</p>
 								</div>
 								<div className="joinPool-info">
-									<p>Remaining:</p>
-									<p>{balanceEth - inputValue.valueInEth} ETH</p>
+									<p style={{fontFamily:'avenir',color:'white'}}>Remaining:</p>
+									<p style={{fontFamily:'avenir',color:'white'}}>{balanceEth - inputValue.valueInEth} ETH</p>
 								</div>
 							</div>
 						</div>
 						<div className="modal-footer joinPool-footer">
-							<button
+							<button style={{fontFamily:'avenir',color:'white',borderRadius:'2px',background:'#1214fd'}}
 								type={inputValue.valueInEth ? "submit" : "button"}
 								className={
 									!inputValue.valueInEth ? "btn-disabled" : "btn-connect"

@@ -196,33 +196,33 @@ const TabPoolDetail = ({ data }) => {
 	}
 	return (
 		<div className="TabPoolDetail-wrapper">
-			<div className="tabs-title">
-				<h4
-					className={activeTab === 1 ? "active" : ""}
+			<div className="tabs-title" style={{border:'none'}}>
+				<h4 style={{fontFamily:'avenir',color:'white'}}
+					className={activeTab === 1 ? "connectwalletbtn" : ""}
 					onClick={() => {
 						activeTabHandler(1);
 					}}
 				>
 					Pool Details
 				</h4>
-				<h4
-					className={activeTab === 2 ? "active" : ""}
+				<h4 style={{fontFamily:'avenir',color:'white'}}
+					className={activeTab === 2 ? "connectwalletbtn" : ""}
 					onClick={() => {
 						activeTabHandler(2);
 					}}
 				>
 					About the Project
 				</h4>
-				<h4
-					className={activeTab === 3 ? "active" : ""}
+				<h4 style={{fontFamily:'avenir',color:'white'}}
+					className={activeTab === 3 ? "connectwalletbtn" : ""}
 					onClick={() => {
 						activeTabHandler(3);
 					}}
 				>
 					Your Allocations
 				</h4>
-				<h4
-					className={activeTab === 4 ? "active" : ""}
+				<h4 style={{fontFamily:'avenir',color:'white'}}
+					className={activeTab === 4 ? "connectwalletbtn" : ""}
 					onClick={() => {
 						activeTabHandler(4);
 					}}
@@ -248,12 +248,12 @@ const TabPoolDetail = ({ data }) => {
 							: "tab-content-2 hidden"
 					}
 				>
-					<div className="table tab-content-2-info-1">
+					<div className="table tab-content-2-info-1" style={{borderRadius:'4px'}}>
 						<div className="table-title">
-							<p>Pool Information</p>
+							<p style={{fontFamily:'avenir',color:'white'}}>Pool Information</p>
 						</div>
 						<div className="table-body table-body-tab-2">
-							<p>{data.aboutThePool}</p>
+							<p style={{fontFamily:'avenir',color:'white'}}>{data.aboutThePool}</p>
 						</div>
 					</div>
 
@@ -265,11 +265,11 @@ const TabPoolDetail = ({ data }) => {
 					<>
 						{!isAllocations ?
 							(<>
-								<NoAllocDesign1 />
-								<NoAllocDesign2 />
+								{/* <NoAllocDesign1 />
+								<NoAllocDesign2 /> */}
 								<div className="tab-content-3-info-1">
-									<h1 className="h1size72Bold">No Allocations</h1>
-									<p style={{ color: "#CEDAF5" }} className="psize18Bold">
+									<h1 style={{fontFamily:'avenir',color:'white'}} className="h1size72Bold">No Allocations</h1>
+									<p style={{ color: "#CEDAF5",fontFamily:'avenir',color:'white' }} className="psize18Bold">
 										Connect your wallet to join the pool you want and raize
 										capital
 									</p>
@@ -280,10 +280,10 @@ const TabPoolDetail = ({ data }) => {
 								<>
 									<div className="tab-content-3-info-2">
 										<div className="table-title tab-3-title">
-											<p>Action</p>
-											<p>Contribution</p>
-											<p>Allocation Date</p>
-											<p>Total Tokens</p>
+											<p style={{fontFamily:'avenir',color:'white'}}>Action</p>
+											<p style={{fontFamily:'avenir',color:'white'}}>Contribution</p>
+											<p style={{fontFamily:'avenir',color:'white'}}>Allocation Date</p>
+											<p style={{fontFamily:'avenir',color:'white'}}>Total Tokens</p>
 											{/* <p>Withdrawn</p>
 						<p>Available Now</p> */}
 										</div>
@@ -304,7 +304,7 @@ const TabPoolDetail = ({ data }) => {
 											<p className="allocation-date-text" >{moment((isAllocations._TimeOfInvestment * 1000)).format('lll')}</p>
 											{/* <p>{new Date(parseInt(isAllocations._TimeOfInvestment * 1000)).toLocaleString()}</p> */}
 											{/* <p>{new Date(isAllocations._TimeOfInvestment.toJSON())}</p> */}
-											<p className="total-tokens-text">
+											<p style={{fontFamily:'avenir',color:'white'}} className="total-tokens-text">
 												{toEther(isAllocations._TotalTokens) + " "}{data.tokenSymbol}
 											</p>
 											{/* <p>0 PHTR</p>
@@ -313,17 +313,17 @@ const TabPoolDetail = ({ data }) => {
 									</div>
 									<div className="tab-content-3-info-2-mobile">
 										<div className="table-title tab-3-title">
-											<p>Contribution</p>
+											<p style={{fontFamily:'avenir',color:'white'}}>Contribution</p>
 
-											<p>Total Tokens</p>
+											<p style={{fontFamily:'avenir',color:'white'}}>Total Tokens</p>
 										</div>
 										<div className="table-body tab-3-info">
 											<div className="body-info-1">
-												<p>
+												<p style={{fontFamily:'avenir',color:'white'}}>
 													{toEther(isAllocations._InvestedAmount) + " "}
 													{data.mainCoinSymbol}
 												</p>
-												<p>
+												<p style={{fontFamily:'avenir',color:'white'}}>
 													{toEther(isAllocations._TotalTokens) + " "}
 													{data.tokenSymbol}
 												</p>
@@ -338,8 +338,8 @@ const TabPoolDetail = ({ data }) => {
 											{mobileMenuOpen && (
 												<div className="body-info-2">
 													<div className="body-info-2-entry">
-														<p>Allocation Date</p>
-														<p>{moment((isAllocations._TimeOfInvestment * 1000)).format('lll')}</p>
+														<p style={{fontFamily:'avenir',color:'white'}}>Allocation Date</p>
+														<p style={{fontFamily:'avenir',color:'white'}}>{moment((isAllocations._TimeOfInvestment * 1000)).format('lll')}</p>
 													</div>
 													{/* <div className="body-info-2-entry">
 													<p>Withdrawn</p>
@@ -351,8 +351,8 @@ const TabPoolDetail = ({ data }) => {
 												</div> */}
 
 													<div className="body-info-2-entry">
-														<p>Status</p>
-														<p>Claimed</p>
+														<p style={{fontFamily:'avenir',color:'white'}}>Status</p>
+														<p style={{fontFamily:'avenir',color:'white'}}>Claimed</p>
 													</div>
 												</div>
 											)}

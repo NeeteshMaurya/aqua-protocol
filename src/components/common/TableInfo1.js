@@ -6,14 +6,14 @@ const TableInfo1 = (props) => {
 	const { data } = props;
 
 	return (
-		<div className="table tab-info-1">
+		<div className="table tab-info-1" style={{borderRadius:'4px'}}>
 			<div className="table-title">
-				<p>Pool Information</p>
+				<p style={{fontFamily:'avenir',color:'white'}}>Pool Information</p>
 			</div>
 			<div className="table-body">
 				<div className="body-info-wrapper">
-					<p>Token Distribution</p>
-					<p>
+					<p style={{fontFamily:'avenir',color:'white'}}>Token Distribution</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>
 						{data.lockedUntillTime ?
 							moment(data.lockedUntillTime).format('LLL') : moment(data.finishTimeOfPool).format('LLL')
 						}
@@ -23,17 +23,17 @@ const TableInfo1 = (props) => {
 					</p>
 				</div>
 				<div className="body-info-wrapper">
-					<p>Min. Allocation</p>
-					<p>{data.minAllocation === 0 ? "No Minimum" : data.minAllocation + " " + data.tokenSymbol}</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>Min. Allocation</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>{data.minAllocation === 0 ? "No Minimum" : data.minAllocation + " " + data.tokenSymbol}</p>
 				</div>
 				<div className="body-info-wrapper">
-					<p>Max. Allocation</p>
-					<p>{data.maxAllocation + " " + data.tokenSymbol}</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>Max. Allocation</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>{data.maxAllocation + " " + data.tokenSymbol}</p>
 				</div>
 
 				<div className="body-info-wrapper">
-					<p>Min Swap Level</p>
-					<p>{data.swapRatio + " " + data.tokenSymbol}</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>Min Swap Level</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>{data.swapRatio + " " + data.tokenSymbol}</p>
 				</div>
 			</div>
 		</div>

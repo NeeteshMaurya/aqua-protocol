@@ -17,10 +17,10 @@ const FilterModal1 = (props) => {
 
 					<div className="filterModal-wrapper">
 						<div className="inner-wrapper">
-							<h4>Status:</h4>
-							<p onClick={() => handleEntryClick("Live", 1)}>Live</p>
-							<p onClick={() => handleEntryClick("Upcoming", 1)}>Upcoming</p>
-							<p onClick={() => handleEntryClick("Filled", 1)}>Filled</p>
+							<h4 style={{fontFamily:'avenir',color:'white'}}>Status:</h4>
+							<p style={{fontFamily:'avenir',color:'white'}} onClick={() => handleEntryClick("Live", 1)}>Live</p>
+							<p style={{fontFamily:'avenir',color:'white'}} onClick={() => handleEntryClick("Upcoming", 1)}>Upcoming</p>
+							<p style={{fontFamily:'avenir',color:'white'}} onClick={() => handleEntryClick("Filled", 1)}>Filled</p>
 						</div>
 					</div>
 				</>

@@ -89,19 +89,19 @@ const DropDown = (props) => {
 				{/* {showClearFilters && <a className="btn btn-pools">X</a>} */}
 				{/* ---------------------------------------------------------------------- */}
 				{[address][0] !== undefined ?
-					<div ref={ref} className="dropDown-wrapper-0">
+					<div ref={ref} className="dropDown-wrapper-0 connectwalletbtn" style={{borderRadius:'2px'}}>
 						<div
 							onClick={() => setshowDropDown0(!showDropDown0)}
 							className="title-wrapper"
 						>
-							<p>{DD0title}</p>
+							<p style={{fontFamily:'avenir',color:'white'}}>{DD0title}</p>
 							<img src={img0Src} alt="down-arrow" />
 						</div>
 
 						{showDropDown0 && (
 							<div className={"dropDown-show-1"}>
 								<div className="dd-entry-wrapper">
-									<p
+									<p style={{fontFamily:'avenir',color:'white'}}
 										onClick={() => ddClickHandler("Joined", 0)}
 										className="dd-entry"
 									>
@@ -109,7 +109,7 @@ const DropDown = (props) => {
 									</p>
 								</div>
 								<div className="dd-entry-wrapper">
-									<p
+									<p style={{fontFamily:'avenir',color:'white'}}
 										onClick={() => ddClickHandler("Top Pools", 0)}
 										className="dd-entry"
 									>
@@ -122,19 +122,19 @@ const DropDown = (props) => {
 				}
 
 				{/* ---------------------------------------------------------------------- */}
-				<div ref={refDd1} className="dropDown-wrapper-1">
+				<div ref={refDd1} className="dropDown-wrapper-1 connectwalletbtn" style={{borderRadius:'2px'}}>
 					<div
 						onClick={() => setshowDropDown1(!showDropDown1)}
 						className="title-wrapper"
 					>
-						<p>{DD1title}</p>
+						<p style={{fontFamily:'avenir',color:'white'}}>{DD1title}</p>
 						<img src={img1Src} alt="down-arrow" />
 					</div>
 
 					{showDropDown1 && (
 						<div className={"dropDown-show-1"}>
 							<div className="dd-entry-wrapper">
-								<p
+								<p style={{fontFamily:'avenir',color:'white'}}
 									onClick={() => ddClickHandler("All", 1)}
 									className="dd-entry"
 								>
@@ -142,7 +142,7 @@ const DropDown = (props) => {
 								</p>
 							</div>
 							<div className="dd-entry-wrapper">
-								<p
+								<p style={{fontFamily:'avenir',color:'white'}}
 									onClick={() => ddClickHandler("Live", 1)}
 									className="dd-entry"
 								>
@@ -150,7 +150,7 @@ const DropDown = (props) => {
 								</p>
 							</div>
 							<div className="dd-entry-wrapper">
-								<p
+								<p style={{fontFamily:'avenir',color:'white'}}
 									onClick={() => ddClickHandler("Upcoming", 1)}
 									className="dd-entry"
 								>
@@ -158,7 +158,7 @@ const DropDown = (props) => {
 								</p>
 							</div>
 							<div className="dd-entry-wrapper">
-								<p
+								<p style={{fontFamily:'avenir',color:'white'}}
 									onClick={() => ddClickHandler("Filled", 1)}
 									className="dd-entry"
 								>
@@ -177,19 +177,19 @@ const DropDown = (props) => {
 						</div>
 					</div>)}
 				</div>
-				<div ref={refDd2} className="dropDown-wrapper-2">
+				<div ref={refDd2} className="dropDown-wrapper-2 connectwalletbtn" style={{borderRadius:'2px'}}>
 					<div
 						onClick={() => setshowDropDown2(!showDropDown2)}
 						className="title-wrapper"
 					>
-						<p>{DD2title}</p>
+						<p style={{fontFamily:'avenir',color:'white'}}>{DD2title}</p>
 						<img src={img2Src} alt="down-arrow" />
 					</div>
 
 					{showDropDown2 && (
 						<div className={"dropDown-show-2"}>
 							<div className="dd-entry-wrapper">
-								<p
+								<p style={{fontFamily:'avenir',color:'white'}}
 									onClick={() => ddClickHandler("Both", 2)}
 									className="dd-entry"
 								>
@@ -197,7 +197,7 @@ const DropDown = (props) => {
 								</p>
 							</div>
 							<div className="dd-entry-wrapper">
-								<p
+								<p style={{fontFamily:'avenir',color:'white'}}
 									onClick={() => ddClickHandler("Private", 2)}
 									className="dd-entry"
 								>
@@ -205,7 +205,7 @@ const DropDown = (props) => {
 								</p>
 							</div>
 							<div className="dd-entry-wrapper">
-								<p
+								<p style={{fontFamily:'avenir',color:'white'}}
 									onClick={() => ddClickHandler("Public", 2)}
 									className="dd-entry"
 								>
@@ -216,9 +216,9 @@ const DropDown = (props) => {
 					)}
 					{showDropDown2 && (<div className="filterModal-wrapper wrapper-2">
 						<div className="inner-wrapper">
-							<h4 style={{ marginLeft: "18px" }} >Access:</h4>
-							<p onClick={() => ddClickHandler("Private", 2)}>Private</p>
-							<p onClick={() => ddClickHandler("Public", 2)}>Public</p>
+							<h4 style={{ontFamily:'avenir',color:'white', marginLeft: "18px" }} >Access:</h4>
+							<p style={{fontFamily:'avenir',color:'white'}} onClick={() => ddClickHandler("Private", 2)}>Private</p>
+							<p style={{fontFamily:'avenir',color:'white'}} onClick={() => ddClickHandler("Public", 2)}>Public</p>
 						</div>
 					</div>)}
 				</div>

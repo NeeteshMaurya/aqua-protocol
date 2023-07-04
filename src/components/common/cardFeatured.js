@@ -56,14 +56,22 @@ const CardFeatured = (props) => {
 							<div className="CardFeatured-wrapper">
 								<div className="CardUpcoming-header">
 									<img src={data.projectLogo} alt="Buisness Icon" />
-									<a
+									<a style={{borderRadius:'2px',fontFamily:'avenir'}}
+										className={`btn-status-card connectwalletbtn all-pool-btn btn btn-${findUpcoming(data.startTimeOfPool) ? "Upcoming" : "Live"
+											}`}
+									>
+										{findUpcoming(data.startTimeOfPool) ? "Upcoming" : <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}
+										><div style={{ width: "6px", height: "6px", background: "#FFFFFF", marginRight: "10px", borderRadius: "6px" }}>
+											</div> Live</div>}
+									</a>
+									{/* <a
 									style={{borderRadius:'2px',fontFamily:'avenir',background:'#1214fd'}}
 										className={`btn-status-card btn-${findUpcoming(data.startTimeOfPool) ? "Upcoming" : "Live"
 											}`}
 									>
 										{findUpcoming(data.startTimeOfPool) ? "Upcoming" : <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }} >
 											<div style={{ width: "6px", height: "6px", marginRight: "10px", borderRadius: "2px" }}></div>Live</div>}
-									</a>
+									</a> */}
 								</div>
 								<h4 style={{fontFamily:'avenir',color:'white'}}>{data.poolName}</h4>
 								<h5 style={{fontFamily:'avenir',color:'white'}}>

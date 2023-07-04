@@ -128,7 +128,7 @@ const PoolDetails = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Pool Details</title>
+				<title >Pool Details</title>
 				<meta name="description" content="Aqua Protocol application" />
 			</Helmet>
 			<>
@@ -146,9 +146,10 @@ const PoolDetails = () => {
 											src={data.projectLogo}
 											alt="Icon"
 										/>
-										<h2 className="heading31">{data.poolName}</h2>
+										<h2 style={{fontFamily:'avenir',color:'white'}} className="heading31">{data.poolName}</h2>
 										<div className="copy-address-wrapper">
-											{isCopied ? <p className="psize16Bold">Copied!</p> : <p className="psize16Bold">{data.tokenAddress}</p>}
+											{isCopied ? <p style={{fontFamily:'avenir',color:'white'}} className="psize16Bold">Copied!</p>
+											 : <p style={{fontFamily:'avenir',color:'white'}} className="psize16Bold">{data.tokenAddress}</p>}
 											{isCopied ? null : <p className="mobileAddress">
 												{trimAdd(data.tokenAddress)}
 											</p>}
@@ -157,7 +158,7 @@ const PoolDetails = () => {
 
 										<div className="time-wrapper">
 											<img src={Analog} alt="clock"></img>
-											<p className="psize18Bold">
+											<p style={{fontFamily:'avenir',color:'white'}} className="psize18Bold">
 												{`${findPublishDate(data.startTimeOfPool)}`}
 											</p>
 										</div>
@@ -165,14 +166,15 @@ const PoolDetails = () => {
 											{!isUp ?
 												<>
 													{[address][0] !== undefined ? <a
+													 style={{fontFamily:'avenir',borderRadius:'2px'}}
 														onClick={toogleIntroModal}
-														className={`btn ${isWhiteListed ? "join-pool-btn" : "btn-disabled"
+														className={`btn connectwalletbtn ${isWhiteListed ? "join-pool-btn" : "btn-disabled"
 															}`}
 													>
 														Join Pool
 													</a> :
-														<a
-															className="btn-disabled"
+														<a style={{fontFamily:'avenir',borderRadius:'2px'}}
+															className="btn-disabled connectwalletbtn"
 														>
 															Join Pool
 														</a>
@@ -180,10 +182,10 @@ const PoolDetails = () => {
 												</> : null
 											}
 
-											<a
+											<a style={{fontFamily:'avenir',borderRadius:'2px'}}
 												target="_blank"
 												href={`https://rinkeby.etherscan.io/token/${data.tokenAddress}`}
-												className="view-ethscan-btn"
+												className="view-ethscan-btn connectwalletbtn"
 											>
 												View Etherscan
 											</a>
@@ -191,7 +193,7 @@ const PoolDetails = () => {
 									</div>
 									<SwapCard data={data} />
 								</div>
-								<div className="pool-info-detailed-wrapper">
+								<div className="pool-info-detailed-wrapper" >
 									{typeof window.ethereum !== 'undefined' ?
 										<TabPoolDetail data={data} /> : "Please install metamask"}
 								</div>

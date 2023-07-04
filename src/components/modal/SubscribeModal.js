@@ -19,14 +19,15 @@ const SubscribeModal = (props) => {
                 <div onClick={toogle} className="modal-overlay"></div>
                 <form onSubmit={handleSubmit} className="modal-wrapper-subscribe">
                     <div className="modal-header">
-                        <p>Subscribe</p>
-                        <span onClick={toogle}>X</span>
+                        <p style={{fontFamily:'avenir',color:'white'}}>Subscribe</p>
+                        <span style={{color:'white'}} onClick={toogle}>X</span>
                     </div>
                     <div className="modal-body join-pool-wrapper">
                         <div className="from-wrapper">
-                            <p>Email</p>
-                            <div className="from">
+                            <p style={{fontFamily:'avenir',color:'white'}}>Email</p>
+                            <div style={{fontFamily:'avenir',color:'white'}} className="from">
                                 <input
+                                   
                                     id="email"
                                     type="email"
                                     name="email"
@@ -61,7 +62,7 @@ const SubscribeModal = (props) => {
                     <div className="modal-footer">
                         <button type="submit" disabled={state.submitting}
                             // onClick={continueBtnHandler}
-                            className="btn-connect btn-connect-with-Arror"
+                            className="btn-connect btn-connect-with-Arror connectwalletbtn"
                         >
                             Submit
                             <img src={Right} alt="rightArrow"></img>

@@ -7,30 +7,30 @@ const TableInfo2 = (props) => {
 		return mobileAdd;
 	};
 	return (
-		<div className="table tab-info-1">
+		<div className="table tab-info-1" style={{borderRadius:'4px'}}>
 			<div className="table-title">
-				<p>Token Information</p>
+				<p style={{fontFamily:'avenir',color:'white'}}>Token Information</p>
 			</div>
 			<div className="table-body">
 				<div className="body-info-wrapper">
-					<p>Name & Symbol</p>
-					<p>
+					<p style={{fontFamily:'avenir',color:'white'}}>Name & Symbol</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>
 						{data.tokenName},{" " + data.tokenSymbol}
 					</p>
 				</div>
 				<div className="body-info-wrapper">
-					<p>Decimals</p>
-					<p>{data.decimal}</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>Decimals</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>{data.decimal}</p>
 				</div>
 				<div className="body-info-wrapper">
-					<p>Address</p>
-					<p className="address-web">{data.tokenAddress.slice(0, 10) + "..." + data.tokenAddress.slice(-10)}</p>
-					<p className="address-mobile">{trimAdd(data.tokenAddress)}</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>Address</p>
+					<p style={{fontFamily:'avenir',color:'white'}} className="address-web">{data.tokenAddress.slice(0, 10) + "..." + data.tokenAddress.slice(-10)}</p>
+					<p style={{fontFamily:'avenir',color:'white'}} className="address-mobile">{trimAdd(data.tokenAddress)}</p>
 				</div>
 
 				<div className="body-info-wrapper">
-					<p>Total Supply</p>
-					<p>{data.totalSupply.toLocaleString()}</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>Total Supply</p>
+					<p style={{fontFamily:'avenir',color:'white'}}>{data.totalSupply.toLocaleString()}</p>
 				</div>
 			</div>
 		</div>

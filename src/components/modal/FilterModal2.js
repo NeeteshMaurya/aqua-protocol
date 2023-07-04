@@ -14,9 +14,9 @@ const FilterModal2 = (props) => {
 					<div onClick={toggle} className="backdrop"></div>
 					<div className="filterModal-wrapper wrapper-2">
 						<div className="inner-wrapper">
-							<h4>Access:</h4>
-							<p onClick={() => handleEntryClick("Private", 2)}>Private</p>
-							<p onClick={() => handleEntryClick("Public", 2)}>Public</p>
+							<h4 style={{fontFamily:'avenir',color:'white'}}>Access:</h4>
+							<p style={{fontFamily:'avenir',color:'white'}} onClick={() => handleEntryClick("Private", 2)}>Private</p>
+							<p style={{fontFamily:'avenir',color:'white'}} onClick={() => handleEntryClick("Public", 2)}>Public</p>
 						</div>
 					</div>
 				</>
