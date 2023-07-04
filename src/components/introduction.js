@@ -20,13 +20,13 @@ const Introduction = (prop) => {
 			</div>
 			<div className="bg bgscreen-4">
 			</div>
-			<h2>First Social-based Capital Raising Platform</h2>
-			<p>
+			<h2 style={{fontFamily:'avenir',color:'white'}}>First Social-based Capital Raising Platform</h2>
+			<p style={{fontFamily:'avenir',color:'white'}}>
 				Where users are incentivized to support and participate in project
 				growth
 			</p>
 			<div
-				onClick={pathAllPools} style={{fontSize: "18px",fontWeight: "bold",marginLeft: "30px",padding: "10px",marginRight: "20px"}} 
+				onClick={pathAllPools} style={{fontSize: "18px",fontFamily:'avenir',fontWeight: "bold",marginLeft: "30px",padding: "10px",marginRight: "20px"}} 
 				className="buttonn connectwalletbtn navbarbtn btn text-white"
 				>
 					All Pools

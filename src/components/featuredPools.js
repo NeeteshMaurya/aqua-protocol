@@ -81,12 +81,12 @@ const FeaturedPools = () => {
 	return (
 		<div className="main-featuredPools">
 			<div className="main-featuredPools-header">
-				<h2>Featured Pools</h2>
-				<a
+				<h2 style={{fontFamily:'avenir',color:'white'}}>Featured Pools</h2>
+				<a 
 					onClick={() => {
 						history.push("/allPools");
 					}}
-					className="btn-pools"
+					className="btn connectwalletbtn text-white"
 				>
 					View All
 				</a>

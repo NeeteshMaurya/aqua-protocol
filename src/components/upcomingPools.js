@@ -28,7 +28,7 @@ const UpcomingPools = (props) => {
 	// console.log("upcoming 2", upcomingPools)
 	return (
 		<div className="main-upcomingPools">
-			<h2>Upcoming Pools</h2>
+			<h2 style={{fontFamily:'avenir',color:'white'}}>Upcoming Pools</h2>
 			<div className="upcoming-pools-wrapper">
 				{upcomingPools && upcomingPools.length > 0 ? <CardUpcoming upcomingPools={upcomingPools} /> : <NoUpcomingFound />}
 
