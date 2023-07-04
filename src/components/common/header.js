@@ -86,11 +86,10 @@ const Header = () => {
   //let bal = useSelector((state) => state.globalReducer.balance);
   return (
     
-    <nav className="navbar navbar-expand-md navbg navbar-dark" style={{ width: "100%",}}>
+    <nav className="navbar navbar-expand-md navbg navbar-dark" style={{ width: "100%",borderBottom:'1px solid #2b3750'}}>
 		<div className="container-fluid">
-        <a href="https://www.aquaprotocol.com"><img className="logo" style={{height:'40px',width:'40px'}} src={logo} alt="logo" /></a>
-        <a className="navbar-brand" style={{marginLeft:"18px",fontWeight:'bold',fontFamily:'sans-serif',color:'#0000ff'}}
-         href="https://www.aquaprotocol.com">AQUA PROTOCOL</a>
+        <a href="https://www.aquaprotocol.com"><img className="logo" style={{height:'41px',width:'41px'}} src={logo} alt="logo" /></a>
+        
               <button
                 className="navbar-toggler"
                 type="button"
@@ -102,12 +101,13 @@ const Header = () => {
               >
                 <span className="navbar-toggler-icon" />
               </button> 
-              <div className="collapse navbar-collapse" id="navbarNav">
+              <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
                     <a
+                    style={{color:'white'}}
                       type="button" 
-                      className="nav-link btn btn-link text-dark navbarbtn buttonn"
+                      className="nav-link btn btn-link navbarbtn buttonn"
                       href="https://earn.aquaprotocol.com/farms"
                     >
                       Farms
@@ -115,8 +115,9 @@ const Header = () => {
                   </li>
                   <li className="nav-item">
                     <a
+                    style={{color:'white'}}
                       type="button"
-                      className="nav-link btn btn-link navbarbtn text-dark buttonn"
+                      className="nav-link btn btn-link navbarbtn buttonn"
                       href="https://earn.aquaprotocol.com/pools"
                     >
                       Pools
@@ -124,8 +125,9 @@ const Header = () => {
                   </li>
                   <li className="nav-item">
                     <Link
+                    style={{color:'white'}}
                       type="button"
-                      className="nav-link navbarbtn btn btn-link text-dark buttonn"
+                      className="nav-link navbarbtn btn btn-link buttonn"
                       to="/"
                     >
                       Aquapad
@@ -145,11 +147,12 @@ const Header = () => {
           <ul className="navbar-nav">
           <li className="nav-item">
           {[add][0] !== undefined && balance ? (
-                  // <div className="nav-link" style={{marginRight:'25px'}}>          
-                    <p className="nav-link text-dark m-auto border border-primary navbarbtn"
-                    style={{fontWeight:'bold',borderRadius:'24px',
-                    padding:'5px',marginRight:'25px'}}>{[add][0].slice(0,7).concat('...')}</p>
-                  // </div>  
+                     <div><div className="nav-link buttonn btn connectwalletbtn text-white"
+                     style={{borderRadius:'24px',width:'100%',
+                     paddingLeft:'32.5px',paddingRight:'32.5px'}}>{[add][0].slice(0,10).concat('....')}</div></div>    
+                    // <p className="nav-link m-auto border border-primary navbarbtn"
+                    // style={{fontWeight:'bold',borderRadius:'24px',
+                    // padding:'5px',marginRight:'25px'}}>{[add][0].slice(0,7).concat('...')}</p>
                   ) :  
 					            <><OnBoardingButton /></>
                   }

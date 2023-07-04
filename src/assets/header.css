@@ -1,7 +1,7 @@
-.buttonn:hover{
+/* .buttonn:hover{
     background-color: #cbccdb;
     border-radius: 10px;
-}
+} */
 
 .logo{
     margin-left: 41px;
@@ -9,22 +9,28 @@
     margin-bottom: 12px; */
 }
 .navbg{
-    background-color:#faf9f6;
+    background-color:#000000;
 }
 .navbarbtn{
-    font-family: Quicksand, sans-serif;
+    font-family: avenir;
     font-size: 16px;
-    margin-left: 30px;
-    padding: 5px;
-    margin-right: 20px;
-    /* margin-top: 15px;
-    margin-bottom: 15px; */
-    /* background: #1214FD; */
-    border-radius: 0%;
+    margin-left: 10px;
+    font-weight: 800;
+    line-height: 18px;
+    letter-spacing: 0.16px;
 }
-.connectwalletbtn{
+.cardnavbtn:active{
     background: #06f;
     border: 1px, solid, #cbccdb;
     border-radius: 15px;
+    font-weight: bold;
 }
+.connectwalletbtn{
+    background: #1214fd;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: avenir;
+    font-weight: 800;
+}
+
 
