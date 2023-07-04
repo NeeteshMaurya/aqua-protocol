@@ -57,67 +57,69 @@ const CardFeatured = (props) => {
 								<div className="CardUpcoming-header">
 									<img src={data.projectLogo} alt="Buisness Icon" />
 									<a
+									style={{borderRadius:'2px',fontFamily:'avenir',background:'#1214fd'}}
 										className={`btn-status-card btn-${findUpcoming(data.startTimeOfPool) ? "Upcoming" : "Live"
 											}`}
 									>
-										{findUpcoming(data.startTimeOfPool) ? "Upcoming" : <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }} ><div style={{ width: "6px", height: "6px", background: "#FFFFFF", marginRight: "10px", borderRadius: "6px" }}></div> Live</div>}
+										{findUpcoming(data.startTimeOfPool) ? "Upcoming" : <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }} >
+											<div style={{ width: "6px", height: "6px", marginRight: "10px", borderRadius: "2px" }}></div>Live</div>}
 									</a>
 								</div>
-								<h4>{data.poolName}</h4>
-								<h5>
+								<h4 style={{fontFamily:'avenir',color:'white'}}>{data.poolName}</h4>
+								<h5 style={{fontFamily:'avenir',color:'white'}}>
 									1 {data.mainCoinSymbol} = {data.swapRatio} {data.tokenSymbol}
 								</h5>
 								<div className="cardUpcoming-info-wrapper">
 									<div className="UpcomingCard-entry">
-										<p className="UpcomingCard-key">Total Raise</p>
-										<p className="UpcomingCard-value-main">
+										<p style={{fontFamily:'avenir',color:'white'}} className="UpcomingCard-key">Total Raise</p>
+										<p style={{fontFamily:'avenir',color:'white'}} className="UpcomingCard-value-main">
 											{data.totalRaise} {data.mainCoinSymbol}
 										</p>
 									</div>
 
 									<div className="progress-bar-FeaturedCard">
-										<p className="progress-bar-header">Progress</p>
+										<p style={{fontFamily:'avenir',color:'white'}} className="progress-bar-header">Progress</p>
 										{/* <div className="progress-value"></div>
 										 */}
 										<div className="progress-bar">
 											<div className="base-progress">
 												{([address][0] !== undefined) ? <p
-													style={{
+													style={{ontFamily:'avenir',color:'white',
 														width: `${calcPercentage(
 															data.totalLeft,
 															data.amountofTokenInPool
 														)}%`,
 													}}
-												></p> : <p style={{ width: '0%' }} ></p>}
+												></p> : <p style={{ width: '0%',ontFamily:'avenir',color:'white' }} ></p>}
 											</div>
 										</div>
 										<div className="progress-bar-FeaturedCard-info">
 											<div>
-												{([address][0] !== undefined) ? <p>
+												{([address][0] !== undefined) ? <p style={{fontFamily:'avenir',color:'white'}}>
 													{Math.round((data.totalLeft / data.amountofTokenInPool) * 100)}%
 													{/* {calcPercentage(data.totalLeft, data.amountofTokenInPool)}% */}
 												</p> : <p>-</p>}
 												{/* <p className="entry-2">(Min. 51%)</p> */}
 											</div>
 
-											<p>
+											<p style={{fontFamily:'avenir',color:'white'}}>
 												{data.totalLeft}/{data.amountofTokenInPool}
 											</p>
 										</div>
 									</div>
 									<div className="UpcomingCard-entry">
-										<p className="UpcomingCard-key">Access</p>
-										<p className="UpcomingCard-value">{data.accessType}</p>
+										<p style={{fontFamily:'avenir',color:'white'}} className="UpcomingCard-key">Access</p>
+										<p style={{fontFamily:'avenir',color:'white'}} className="UpcomingCard-value">{data.accessType}</p>
 									</div>
 									<div className="UpcomingCard-entry">
-										<p className="UpcomingCard-key">Participants:</p>
-										<p className="UpcomingCard-value">{data.participant}</p>
+										<p style={{fontFamily:'avenir',color:'white'}} className="UpcomingCard-key">Participants:</p>
+										<p style={{fontFamily:'avenir',color:'white'}} className="UpcomingCard-value">{data.participant}</p>
 									</div>
 									<div className="UpcomingCard-entry">
-										<p className="UpcomingCard-key">
+										<p style={{fontFamily:'avenir',color:'white'}} className="UpcomingCard-key">
 											Max {data.mainCoinSymbol}:
 										</p>
-										<p className="UpcomingCard-value">{data.maxAllocation}</p>
+										<p style={{fontFamily:'avenir',color:'white'}} className="UpcomingCard-value">{data.maxAllocation}</p>
 									</div>
 								</div>
 							</div>
