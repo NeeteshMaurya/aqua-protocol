@@ -166,14 +166,14 @@ const PoolDetails = () => {
 											{!isUp ?
 												<>
 													{[address][0] !== undefined ? <a
-													 style={{fontFamily:'avenir',borderRadius:'2px'}}
+													 style={{fontFamily:'avenir',borderRadius:'2px',background:'#1214fd',border:'none'}}
 														onClick={toogleIntroModal}
 														className={`btn connectwalletbtn ${isWhiteListed ? "join-pool-btn" : "btn-disabled"
 															}`}
 													>
 														Join Pool
 													</a> :
-														<a style={{fontFamily:'avenir',borderRadius:'2px'}}
+														<a style={{fontFamily:'avenir',borderRadius:'2px',background:'#1214fd',border:'none'}}
 															className="btn-disabled connectwalletbtn"
 														>
 															Join Pool
@@ -182,7 +182,7 @@ const PoolDetails = () => {
 												</> : null
 											}
 
-											<a style={{fontFamily:'avenir',borderRadius:'2px'}}
+											<a style={{fontFamily:'avenir',borderRadius:'2px',border:'none'}}
 												target="_blank"
 												href={`https://rinkeby.etherscan.io/token/${data.tokenAddress}`}
 												className="view-ethscan-btn connectwalletbtn"

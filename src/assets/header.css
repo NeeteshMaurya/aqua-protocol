@@ -34,4 +34,10 @@
     border:none;
 }
 
+@media (max-width: 762px){
+    .headerdiv{
+        margin-left: 60px;
+    }
+}
+
 

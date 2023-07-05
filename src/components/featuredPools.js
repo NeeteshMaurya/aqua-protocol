@@ -82,7 +82,7 @@ const FeaturedPools = () => {
 		<div className="main-featuredPools">
 			<div className="main-featuredPools-header">
 				<h2 style={{fontFamily:'avenir',color:'white'}}>Featured Pools</h2>
-				<a 
+				<a style={{fontSize: "14px",fontFamily:'avenir'}}
 					onClick={() => {
 						history.push("/allPools");
 					}}

@@ -26,7 +26,7 @@ const Introduction = (prop) => {
 				growth
 			</p>
 			<div
-				onClick={pathAllPools} style={{fontSize: "18px",fontFamily:'avenir',fontWeight: "bold",marginLeft: "30px",padding: "10px",marginRight: "20px"}} 
+				onClick={pathAllPools} style={{fontSize: "14px",fontFamily:'avenir',fontWeight: 800,marginLeft: "30px",padding: "10px",marginRight: "20px"}} 
 				className="buttonn connectwalletbtn navbarbtn btn text-white"
 				>
 					All Pools

@@ -321,7 +321,7 @@ const JoinPoolModal = (props) => {
 				<>
 					<div onClick={toogle} className="modal-overlay"></div>
 
-					<form style={{ height: "579px" }} onSubmit={handleSubmit} className="modal-wrapper">
+					<form style={{ height: "579px",borderRadius:'4px',background:'black',border:'1px solid white' }} onSubmit={handleSubmit} className="modal-wrapper">
 						<div className="modal-header">
 							<p style={{fontFamily:'avenir',color:'white'}}>Join Pool</p>
 							<span onClick={toogle}>X</span>
@@ -342,13 +342,13 @@ const JoinPoolModal = (props) => {
 									/>
 
 									<div className="max-min-wrapper">
-										<a style={{fontFamily:'avenir',color:'white'}}
+										<a style={{fontFamily:'avenir',color:'white',borderRadius:'2px'}}
 											onClick={maxAllocationHandler}
-											className="btn btn-pools max-min"
+											className="btn btn-pools max-min connectwalletbtn"
 										>
 											MAX
 										</a>
-										<a style={{ border: "none" ,fontFamily:'avenir',color:'white'}} className="btn btn-pools max-min">{mainCSymbol}</a>
+										<a style={{borderRadius:'2px' ,border: "none" ,fontFamily:'avenir',color:'white'}} className="btn btn-pools max-min">{mainCSymbol}</a>
 									</div>
 								</div>
 
@@ -372,8 +372,9 @@ const JoinPoolModal = (props) => {
 								</div>
 							</div>
 						</div>
-						<div style={{ paddingTop: "34px",fontFamily:'avenir',color:'white',borderRadius:'2px',background:'#1214fd' }} className="modal-footer joinPool-footer">
-							<button style={{ width: "100%" }}
+						
+						<div style={{paddingTop:'35px'}} className="modal-footer joinPool-footer">
+							<button style={{border:'none', width: "100%",fontFamily:'avenir',color:'white',borderRadius:'2px',background:'#1214fd',fontSize:'14px' }}
 								type={isValid ? "submit" : "button"}
 								className={!isValid ? "btn-disabled" : "btn-connect"}
 							>
