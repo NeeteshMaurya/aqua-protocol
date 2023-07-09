@@ -145,8 +145,8 @@ export function OnBoardingButton() {
 	};
 	return (<>
 		{accounts.length > 0 ? null : <a
-		   style={{paddingLeft:'29px',paddingRight:'29px'}}
-			className={!isDisabled ? " btn nav-link text-white connectwalletbtn" : "connectwalletbtn btn nav-link text-white disabled" }
+		   style={{paddingLeft:'29px',paddingRight:'29px',borderRadius:'0px'}}
+			className={!isDisabled ? " btn nav-link text-white connectwalletbtn" : "connectwalletbtn btn text-white nav-link disabled" }
 			onClick={onClick}
 		>
 			{buttonText}

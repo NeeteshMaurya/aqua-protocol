@@ -105,7 +105,7 @@ const Header = () => {
                 <ul className="navbar-nav">
                   <li className="nav-item">
                     <a
-                    style={{color:'white'}}
+                    style={{color:'#939db0'}}
                       type="button" 
                       className="nav-link btn btn-link navbarbtn buttonn"
                       href="https://earn.aquaprotocol.com/farms"
@@ -115,7 +115,7 @@ const Header = () => {
                   </li>
                   <li className="nav-item">
                     <a
-                    style={{color:'white'}}
+                    style={{color:'#939db0'}}
                       type="button"
                       className="nav-link btn btn-link navbarbtn buttonn"
                       href="https://earn.aquaprotocol.com/pools"
@@ -123,7 +123,7 @@ const Header = () => {
                       Pools
                     </a>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item headerr">
                     <Link
                     style={{color:'white'}}
                       type="button"
@@ -154,7 +154,7 @@ const Header = () => {
                     // style={{fontWeight:'bold',borderRadius:'24px',
                     // padding:'5px',marginRight:'25px'}}>{[add][0].slice(0,7).concat('...')}</p>
                   ) :  
-					            <><OnBoardingButton /></>
+                  <><OnBoardingButton /></>
                   }
                   </li>
                 </ul>
