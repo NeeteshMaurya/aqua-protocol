@@ -101,7 +101,7 @@ const Header = () => {
               >
                 <span className="navbar-toggler-icon" />
               </button> 
-              <div className="collapse navbar-collapse justify-content-end" id="navbarNav" style={{marginLeft:'60px'}}>
+              <div className="collapse navbar-collapse justify-content-end headermargin" id="navbarNav" style={{marginLeft:'60px'}}>
                 <ul className="navbar-nav">
                   <li className="nav-item">
                     <a
@@ -143,9 +143,9 @@ const Header = () => {
           </li> */}
         </ul>
       </div>
-      <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div className="collapse navbar-collapse justify-content-end headermargin" id="navbarNav">
           <ul className="navbar-nav">
-          <li className="nav-item headerdiv">
+          <li className="nav-item headermargin2">
           {[add][0] !== undefined && balance ? (
                      <div><div className="nav-link buttonn btn connectwalletbtn text-white"
                      style={{borderRadius:'24px',width:'100%',
